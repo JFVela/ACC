@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculadora</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calcular precios</h1>
+
+        <h2>Tarifas Mas Movil</h2>
+        <div onclick="mostrarMensaje()" class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnMasMovil" id="ningunaMasMovil" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="ningunaMasMovil">Ninguno</label>
+
+            <input type="radio" class="btn-check" name="btnMasMovil" id="movil60GB" autocomplete="off">
+            <label class="btn btn-outline-primary" for="movil60GB">Fibra(1GB) + Fijo + Movil(60Gb)</label>
+
+            <input type="radio" class="btn-check" name="btnMasMovil" id="movil120GB" autocomplete="off">
+            <label class="btn btn-outline-primary" for="movil120GB">Fibra(1GB) + Fijo + Movil(120Gb)</label>
+
+        </div>
+        <h2>Pro 10GB</h2>
+        <div onclick="mostrarMensaje()" class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio10" id="cantidad10_01" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="cantidad10_01">0</label>
+
+            <input type="radio" class="btn-check" name="btnradio10" id="cantidad10_02" autocomplete="off">
+            <label class="btn btn-outline-primary" for="cantidad10_02">1</label>
+
+            <input type="radio" class="btn-check" name="btnradio10" id="cantidad10_03" autocomplete="off">
+            <label class="btn btn-outline-primary" for="cantidad10_03">2</label>
+
+            <input type="radio" class="btn-check" name="btnradio10" id="cantidad10_04" autocomplete="off">
+            <label class="btn btn-outline-primary" for="cantidad10_04">3</label>
+
+            <input type="radio" class="btn-check" name="btnradio10" id="cantidad10_05" autocomplete="off">
+            <label class="btn btn-outline-primary" for="cantidad10_05">4</label>
+        </div>
+
+        <h2>Pro 35GB</h2>
+        <div onclick="mostrarMensaje()" class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio35" id="cantidad35_01" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="cantidad35_01">0</label>
+
+            <input type="radio" class="btn-check" name="btnradio35" id="cantidad35_02" autocomplete="off">
+            <label class="btn btn-outline-primary" for="cantidad35_02">1</label>
+
+            <input type="radio" class="btn-check" name="btnradio35" id="cantidad35_03" autocomplete="off">
+            <label class="btn btn-outline-primary" for="cantidad35_03">2</label>
+
+            <input type="radio" class="btn-check" name="btnradio35" id="cantidad35_04" autocomplete="off">
+            <label class="btn btn-outline-primary" for="cantidad35_04">3</label>
+
+            <input type="radio" class="btn-check" name="btnradio35" id="cantidad35_05" autocomplete="off">
+            <label class="btn btn-outline-primary" for="cantidad35_05">4</label>
+        </div>
+
+        <h2>Pro 60GB</h2>
+        <div onclick="mostrarMensaje()" class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio60" id="cantidad60_01" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="cantidad60_01">0</label>
+
+            <input type="radio" class="btn-check" name="btnradio60" id="cantidad60_02" autocomplete="off">
+            <label class="btn btn-outline-primary" for="cantidad60_02">1</label>
+
+            <input type="radio" class="btn-check" name="btnradio60" id="cantidad60_03" autocomplete="off">
+            <label class="btn btn-outline-primary" for="cantidad60_03">2</label>
+
+            <input type="radio" class="btn-check" name="btnradio60" id="cantidad60_04" autocomplete="off">
+            <label class="btn btn-outline-primary" for="cantidad60_04">3</label>
+
+            <input type="radio" class="btn-check" name="btnradio60" id="cantidad60_05" autocomplete="off">
+            <label class="btn btn-outline-primary" for="cantidad60_05">4</label>
+        </div>
+
+        <h2>Servicios Adicionales</h2>
+        <div onclick="mostrarMensaje()" class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnService" id="ninguna" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="ninguna">Ninguno</label>
+
+            <input type="radio" class="btn-check" name="btnService" id="tvPremiun" autocomplete="off">
+            <label class="btn btn-outline-primary" for="tvPremiun">Tv Premiun</label>
+
+            <input type="radio" class="btn-check" name="btnService" id="tvExtra" autocomplete="off">
+            <label class="btn btn-outline-primary" for="tvExtra">Tv Extra</label>
+
+            <input type="radio" class="btn-check" name="btnService" id="ipFija" autocomplete="off">
+            <label class="btn btn-outline-primary" for="ipFija">Ip Fija</label>
+        </div>
+
+
+        <div id="muestraMensajeMovil"></div>
+        <div id="muestraMensaje10"></div>
+        <div id="muestraMensaje35"></div>
+        <div id="muestraMensaje60"></div>
+        <div id="muestraMensajeServ"></div>
+        <div id="mensajeTotal"></div>
+    </div>
+
+    <script src="app.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
